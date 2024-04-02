@@ -19,6 +19,10 @@ int Tinycar::getImage(cv::Mat& out) {
     return false;
 }
 
+cv::Mat Tinycar::getLastImage() {
+    return frameMat;
+}
+
 double Tinycar::getFPS() {
     return current_fps;
 }

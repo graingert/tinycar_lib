@@ -29,6 +29,7 @@ public:
     Tinycar(const std::string& hostname);
     // Getter
     int getImage(cv::Mat& out);
+    cv::Mat getLastImage();
     double getFPS();
     
     void setMotorDutyCycle(int16_t dutyCycle);
