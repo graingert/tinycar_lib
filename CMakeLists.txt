@@ -16,6 +16,7 @@ find_package(pybind11 REQUIRED)
 
 execute_process(COMMAND ${PYTHON_EXECUTABLE} -c "import numpy; print(numpy.get_include())" OUTPUT_VARIABLE NUMPY_INCLUDE OUTPUT_STRIP_TRAILING_WHITESPACE)
 message(STATUS "NUMPY_INCLUDE: " ${NUMPY_INCLUDE})
+message(STATUS "PYTHON_EXECUTABLE: " ${PYTHON_EXECUTABLE})
 
 add_library(tinycar_lib STATIC ${TINYCAR_SOURCES})
 target_link_libraries(tinycar_lib PRIVATE ${OpenCV_LIBS})
