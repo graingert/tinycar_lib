@@ -13,10 +13,6 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 find_package(OpenCV REQUIRED)
 find_package(pybind11 REQUIRED)
-find_package(Python 3.12 REQUIRED COMPONENTS Interpreter Development.Module NumPy)
-
-include(CMakePrintHelpers)
-cmake_print_variables(Python_NumPy_INCLUDE_DIRS)
 
 execute_process(COMMAND ${PYTHON_EXECUTABLE} -c "import numpy; print(numpy.get_include())" OUTPUT_VARIABLE NUMPY_INCLUDE OUTPUT_STRIP_TRAILING_WHITESPACE)
 message(STATUS "NUMPY_INCLUDE: " ${NUMPY_INCLUDE})
